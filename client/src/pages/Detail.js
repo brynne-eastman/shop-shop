@@ -16,7 +16,7 @@ import {
   ADD_TO_CART,
   UPDATE_PRODUCTS 
 } from "../utils/actions";
-import CartItem from '../components/CartItem';
+//import cartItem from '../components/CartItem';
 
 function Detail() {
   const [state, dispatch] = useStoreContext();
@@ -104,6 +104,7 @@ function Detail() {
             <button onClick={addToCart}>Add to Cart</button>
             <button
               disabled={!cart.find(p => p._id === currentProduct._id)}
+              onClick={removeFromCart}
             >
               Remove from Cart
             </button>
